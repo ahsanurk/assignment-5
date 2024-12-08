@@ -1,11 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donate Bangladesh</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
+    <section class="bg-slate-200 sticky top-0 z-40">
+        <!-- navbar start here -->
+        <div class="navbar bg-base-100 text-center flex flex-col sm:flex sm:flex-row">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"></ul>
+                </div>
+                <a class="btn btn-ghost text-xl bg-blue-600 text-white"
+                    onclick="window.location.href = 'blog.html'">Blog</a>
+            </div>
+            <div class="navbar-center flex flex-col sm:flex sm:flex-row">
+                <img src="./assets/logo.png" alt="" />
+                <h3 class="ml-2">Donate Bangladesh</h3>
+            </div>
+            <div class="navbar-end display-flex">
+                <img src="./assets/coin.png" alt="" />
+                <h3 id="total-balance">12900</h3><span>&nbsp;BDT</span>
+            </div>
+        </div>
+        <!-- navbar end here -->
+
+        <!--header center buttons start -->
+        <header class="flex justify-center mt-10 gap-4 pb-10 flex flex-col sm:flex sm:flex-row text-center">
+            <button id="main-donation-btn" class="btn btn-success">Donation</button>
+            <button id="donation-history-btn" class="btn btn-active">History</button>
+        </header>
+        <!--header center buttons end -->
+    </section>
+
+    <!--------- cards ------------->
+    <main id="main-section" class="mt-1 active">
+        <!-- Donate card 1 start-->
+        <div class="card card-side bg-base-100 shadow-xl justify-between flex flex-colmt-10 sm:flex sm:flex-row">
+            <div>
+                <img src="./assets/noakhali.png" alt="" />
+            </div>
+            <div class="card-body">
+                <div>
+                    <div class="flex">
+                        <img class="h-6" src="./assets/coin.png" alt="" />
+                        <h2 id="total-noakhali-balance">0 BDT</h2>
+                    </div>
+                    <h2 class="card-title">
+                        Donate for Flood at <span id="nokhali-donation">Noakhali</span>, Bangladesh
+                    </h2>
+                    <p>
+                        The recent floods in Noakhali have caused significant damage to
+                        homes infrastructure. Your donation will help provide essential
+                        supplies and to those affected by this disaster. Every
+                        contribution, big or small, makes difference. Please join us in
+                        supporting the relief efforts and making a positive impact on the
+                        lives of those in need.
+                    </p>
+                    <input id="noakhali-donation-input-field" type="text" placeholder="Write Donation Amount"
+                        class="input input-bordered input-success w-full mt-2" />
+                    <button id="donate-noakhali-btn" class="btn btn-block btn-accent text-lg mt-2">
+                        Donate Now
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Donate card 1 end here-->
+
+        <!-- Donate card 2 start here-->
+        <div class="card card-side bg-base-100 shadow-xl flex flex-col sm:flex sm:flex-row justify-between mt-10">
+            <div>
+                <img src="./assets/feni.png" alt="" />
+            </div>
+            <div class="card-body">
+                <div>
+                    <div class="flex">
+                        <img class="h-6" src="./assets/coin.png" alt="" />
+                        <h2 id="total-feni-balance">0 BDT</h2>
+                    </div>
+                    <h2 class="card-title">
+                        Donate for Flood Relief in
+                        <span id="feni-donation">Feni</span> ,Bangladesh
+                    </h2>
+                    <p>
+                        The recent floods in Feni have devastated local communities,
+                        leading to severe disruption and loss. Your generous donation will
+                        help provide immediate aid, including food, clean water, and
+                        medical supplies, to those affected by this calamity. Together, we
+                        can offer crucial support and help rebuild lives in the aftermath
+                        of this disaster. Every contribution counts towards making a real
+                        difference. Please consider donating today to assist those in
+                        urgent need.
+                    </p>
+                    <input id="feni-donation-input-field" type="text" placeholder="Write Donation Amount"
+                        class="input input-bordered input-success w-full mt-2" />
+                    <button id="donate-feni-btn" class="btn btn-block btn-accent text-lg mt-2">
+                        Donate Now
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Donate card 2 end here-->
+
+        <!-- Donate card 3 start here-->
+        <div class="card card-side bg-base-100 shadow-xl justify-between mt-10 flex flex-col sm:flex sm:flex-row">
+            <div>
+                <img src="./assets/quota-protest.png" alt="" />
+            </div>
+            <div class="card-body">
+                <div>
+                    <div class="flex">
+                        <img class="h-6" src="./assets/coin.png" alt="" />
+                        <h2 id="total-quota-movement-balance">0 BDT</h2>
+                    </div>
+                    <h2 class="card-title">
+                        Aid for Injured in the
+                        <span id="quota-movement-donation">Quota Movement</span>
+                    </h2>
+                    <p>
+                        The recent Quota movement has resulted in numerous injuries and
+                        significant hardship for many individuals. Your support is crucial
+                        in providing medical assistance, rehabilitation, and necessary
+                        supplies to those affected. By contributing, you help ensure that
+                        injured individuals receive the care and support they need during
+                        this challenging time. Every donation plays a vital role in
+                        alleviating their suffering and aiding in their recovery. Please
+                        consider making a donation to support these brave individuals in
+                        their time of need.
+                    </p>
+                    <input id="quota-movement-donation-input-field" type="text" placeholder="Write Donation Amount"
+                        class="input input-bordered input-success w-full mt-2" />
+                    <button id="donate-quota-movement-btn" class="btn btn-block btn-accent text-lg mt-2">
+                        Donate Now
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Donate card 3 end here-->
+    </main>
+    <!--------- Cards ------------->
+    <!-- History section start here -->
+    <section id="history-section-details" class="hidden">
+        <h1>Donation History</h1>
+        <div id="donation-container"></div>
+    </section>
+    <!-- History section end here-->
     
+    <!-- js files start-->
+    <script src="./js/index.js"></script>
+    <!-- js files end-->
 </body>
+
 </html>
